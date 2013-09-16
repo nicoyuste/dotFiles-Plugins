@@ -1,0 +1,3 @@
+[submodule "xCode_Plugins/XcodeColors"]
+	path = xCode_Plugins/XcodeColors
+url=git@github.com:mralexgray/XcodeColors.git
