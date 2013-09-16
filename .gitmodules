@@ -1,3 +1,6 @@
 [submodule "xCode_Plugins/XcodeColors"]
 	path = xCode_Plugins/XcodeColors
 url=git@github.com:mralexgray/XcodeColors.git
+[submodule "xCode_Plugins/KSImageNamed"]
+	path = xCode_Plugins/KSImageNamed
+	url = git@github.com:ksuther/KSImageNamed-Xcode.git
