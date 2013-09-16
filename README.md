@@ -8,6 +8,7 @@ All the xCode Plugins are added the project (from other git repositories) as sub
 
 Added plugins:
 --------------
-xCodeColors - it allows you to print in colors while debugging. The one which is added to the repositorie (as submodule) is one from a fork on the originial.<br/>
-*   Fork added: https://github.com/mralexgray/XcodeColors
+**xCodeColors** - it allows you to print in colors while debugging. The one which is added to the repository (as submodule) is one from a fork on the originial.<br/>
+I have created a few Macros that help using colors while logging in debug mode with this plugin, they all are in [NYConstants.h](https://github.com/nicoyuste/dotFiles-Plugins/blob/master/NYConstants.h) file.
+*   Fork added: https://github.com/mralexgray/XcodeColors (compatibility with xCode5)
 *   Original: https://github.com/robbiehanson/XcodeColors
