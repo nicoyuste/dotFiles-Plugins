@@ -21,4 +21,8 @@
 #define NYLogBlue(fmt,...) NSLog((XCODE_COLORS_ESCAPE @"fg0,0,255;" fmt XCODE_COLORS_RESET),##__VA_ARGS__)
 #define NYLogRed(fmt,...) NSLog((XCODE_COLORS_ESCAPE @"fg220,0,0;" fmt XCODE_COLORS_RESET),##__VA_ARGS__)
 #define NYLogGreen(fmt,...) NSLog((XCODE_COLORS_ESCAPE @"fg0,255,0;" fmt XCODE_COLORS_RESET),##__VA_ARGS__)
+#define NYLogPurple(fmt,...) NSLog((XCODE_COLORS_ESCAPE @"fg132,112,255;" fmt XCODE_COLORS_RESET),##__VA_ARGS__)
+#define NYLogOrange(fmt,...) NSLog((XCODE_COLORS_ESCAPE @"fg255,127,36;" fmt XCODE_COLORS_RESET),##__VA_ARGS__)
+
+
 #define NYLogGreenBlue(fmt,fmt2,...) NSLog((XCODE_COLORS_ESCAPE @"fg0,255,0;" fmt XCODE_COLORS_ESCAPE @"fg0,0,255;" fmt2 XCODE_COLORS_RESET),##__VA_ARGS__)
