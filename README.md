@@ -16,8 +16,12 @@ I have created a few Macros that help using colors while logging in debug mode w
 **KSImageNamed** - It helps you when you are creating an `UImage` with the method `ImageNamed:` showing you all the images that you have imported into the project.
 *   Original: https://github.com/ksuther/KSImageNamed-Xcode
 
-**KSImageNamed** - It helps you to track all `TODOs`that you have all around your code.
+**XToDo** - It helps you to track all `TODOs`that you have all around your code.
 *   Original: https://github.com/trawor/XToDo.git
+
+**ColorSense** - It helps you to define color with `[UIColor colorWith...]`
+*   Original: https://github.com/trawor/XToDo.git
+
 
 ## License
 

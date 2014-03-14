@@ -31,3 +31,14 @@ xcrun xcodebuild -project ./xCode_Plugins/xTODO/XToDo.xcodeproj -target XToDo  -
 rm -rf build
 
 echo **XTODO installed**
+
+#! ColorSense
+
+cd XCode_Plugins/ColorSense
+git pull origin master
+cd ../..
+
+xcrun xcodebuild -project ./xCode_Plugins/ColorSense/OMColorSense.xcodeproj -target OMColorSense  -configuration Release
+rm -rf build
+
+echo **ColorSense installed**
