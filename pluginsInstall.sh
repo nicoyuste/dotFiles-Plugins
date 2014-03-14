@@ -20,3 +20,14 @@ xcrun xcodebuild -project ./xCode_Plugins/KSImageNamed/KSImageNamed.xcodeproj -t
 rm -rf build
 
 echo **KSImageNamed installed**
+
+#! XTodo
+
+cd XCode_Plugins/xTODO
+git pull origin master
+cd ../..
+
+xcrun xcodebuild -project ./xCode_Plugins/xTODO/XToDo.xcodeproj -target XToDo  -configuration Release
+rm -rf build
+
+echo **XTODO installed**

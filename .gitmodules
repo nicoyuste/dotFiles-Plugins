@@ -4,3 +4,6 @@ url=git@github.com:mralexgray/XcodeColors.git
 [submodule "xCode_Plugins/KSImageNamed"]
 	path = xCode_Plugins/KSImageNamed
 	url = git@github.com:ksuther/KSImageNamed-Xcode.git
+[submodule "xCode_Plugins/xTODO"]
+	path = xCode_Plugins/xTODO
+	url = https://github.com/trawor/XToDo.git
