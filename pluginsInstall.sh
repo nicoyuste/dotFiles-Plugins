@@ -7,7 +7,6 @@ cd ../..
 
 xcrun xcodebuild -project ./xCode_Plugins/XcodeColors/XcodeColors.xcodeproj -target XcodeColors  -configuration Xcode5
 rm -rf build
-rm -rf XcodeColors
 echo **XcodeColors installed**
 
 #! KSImageNamed
@@ -31,6 +30,18 @@ xcrun xcodebuild -project ./xCode_Plugins/xTODO/XToDo.xcodeproj -target XToDo  -
 rm -rf build
 
 echo **XTODO installed**
+
+#! Uncrustify
+
+cd XCode_Plugins/XXUncrustify
+git pull origin master
+cd ../..
+
+xcrun xcodebuild -project ./xCode_Plugins/XXUncrustify/BBUncrustifyPlugin.xcodeproj -target BBUncrustifyPlugin  -configuration Debug
+rm -rf build
+
+echo **XTODO installed**
+
 
 #! ColorSense
 
