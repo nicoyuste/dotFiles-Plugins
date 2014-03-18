@@ -40,7 +40,7 @@ cd ../..
 xcrun xcodebuild -project ./xCode_Plugins/XXUncrustify/BBUncrustifyPlugin.xcodeproj -target BBUncrustifyPlugin  -configuration Debug
 rm -rf build
 
-echo **XTODO installed**
+echo **Uncrustify installed**
 
 
 #! ColorSense
