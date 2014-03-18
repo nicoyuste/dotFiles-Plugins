@@ -5,7 +5,7 @@ cd xCode_Plugins/XcodeColors
 git pull origin master
 cd ../..
 
-xcrun xcodebuild -project ./xCode_Plugins/XcodeColors/XcodeColors.xcodeproj -target XcodeColors  -configuration Release
+xcrun xcodebuild -project ./xCode_Plugins/XcodeColors/XcodeColors.xcodeproj -target XcodeColors  -configuration Xcode5
 rm -rf build
 rm -rf XcodeColors
 echo **XcodeColors installed**
