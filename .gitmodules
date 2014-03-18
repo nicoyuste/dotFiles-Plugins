@@ -10,3 +10,6 @@ url=git@github.com:mralexgray/XcodeColors.git
 [submodule "xCode_Plugins/ColorSense"]
 	path = xCode_Plugins/ColorSense
 	url = https://github.com/omz/ColorSense-for-Xcode.git
+[submodule "xCode_Plugins/XXUncrustify"]
+	path = xCode_Plugins/XXUncrustify
+	url = https://github.com/benoitsan/BBUncrustifyPlugin-Xcode.git
