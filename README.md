@@ -25,6 +25,8 @@ I have created a few Macros that help using colors while logging in debug mode w
 **BBUncrustifyPlugin** - 
 *   Original: https://github.com/benoitsan/BBUncrustifyPlugin-Xcode.git
 
+**VVDocumenter-Xcode** - 
+*   Original: https://github.com/onevcat/VVDocumenter-Xcode.git
 
 ## License
 

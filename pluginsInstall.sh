@@ -53,3 +53,14 @@ xcrun xcodebuild -project ./xCode_Plugins/ColorSense/OMColorSense.xcodeproj -tar
 rm -rf build
 
 echo **ColorSense installed**
+
+#! VVDocumenter
+
+cd XCode_Plugins/VVDocumenter
+git pull origin master
+cd ../..
+
+xcrun xcodebuild -project ./xCode_Plugins/VVDocumenter/VVDocumenter-Xcode.xcodeproj -target VVDocumenter-Xcode  -configuration Debug
+rm -rf build
+
+echo **VVDocumenter-Xcode installed**
