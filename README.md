@@ -28,12 +28,12 @@ I have created a few Macros that help using colors while logging in debug mode w
 **VVDocumenter-Xcode** - 
 *   Original: https://github.com/onevcat/VVDocumenter-Xcode.git
 
-## License
-
 Added tools:
 --------------
 **xctool** - It is a open source tool developed by Facebook that manage command lines tools much better than xcodebuild 
 *   Original: https://github.com/facebook/xctool.git
+
+## License
 
 MIT License
 
