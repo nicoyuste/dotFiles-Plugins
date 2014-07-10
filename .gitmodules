@@ -16,3 +16,6 @@ url=git@github.com:mralexgray/XcodeColors.git
 [submodule "xCode_Plugins/VVDocumenter"]
 	path = xCode_Plugins/VVDocumenter
 	url = https://github.com/onevcat/VVDocumenter-Xcode.git
+[submodule "xCode_Plugins/xctool"]
+	path = xCode_Plugins/xctool
+	url = https://github.com/facebook/xctool.git

@@ -30,6 +30,11 @@ I have created a few Macros that help using colors while logging in debug mode w
 
 ## License
 
+Added tools:
+--------------
+**xctool** - It is a open source tool developed by Facebook that manage command lines tools much better than xcodebuild 
+*   Original: https://github.com/facebook/xctool.git
+
 MIT License
 
     Copyright (c) 2013 Kent Sutherland

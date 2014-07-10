@@ -64,3 +64,7 @@ xcrun xcodebuild -project ./xCode_Plugins/VVDocumenter/VVDocumenter-Xcode.xcodep
 rm -rf build
 
 echo **VVDocumenter-Xcode installed**
+
+#! xctools
+
+./addAliasToBashProfile.sh
