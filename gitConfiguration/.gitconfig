@@ -13,5 +13,5 @@
   s = status -sb
   br = branch
   co = checkout
-  glog = git log --oneline --decorate --color --graph
+  glog = log --graph --decorate --pretty=oneline --abbrev-commit --all
   
