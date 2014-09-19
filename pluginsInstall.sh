@@ -67,4 +67,8 @@ echo **VVDocumenter-Xcode installed**
 
 #! xctools
 
+cd XCode_Plugins/xctool
+git pull origin master
+cd ../..
+
 ./addAliasToBashProfile.sh
