@@ -2,10 +2,16 @@
 	name = Nicolas Yuste
 	email = info@nicoyuste.es
 [core]
-	excludesfile = /Users/nicoyuste/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[alias]
+  s = status -sb
+  br = branch
+  co = checkout
+  glog = git log --oneline --decorate --color --graph
+  
