@@ -65,6 +65,17 @@ rm -rf build
 
 echo **VVDocumenter-Xcode installed**
 
+#! MCLog
+
+cd XCode_Plugins/MCLog
+git pull origin master
+cd ../..
+
+xcrun xcodebuild -project ./xCode_Plugins/MCLog/MCLog.xcodeproj -target MCLog  -configuration Debug
+rm -rf build
+
+echo **MCLog installed**
+
 #! xctools
 
 cd XCode_Plugins/xctool

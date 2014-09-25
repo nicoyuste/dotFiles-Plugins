@@ -28,6 +28,9 @@ I have created a few Macros that help using colors while logging in debug mode w
 **VVDocumenter-Xcode** - 
 *   Original: https://github.com/onevcat/VVDocumenter-Xcode.git
 
+**MCLog** - It gives you the possibility to apply regular expressions into the console output.
+*   Original: https://github.com/yuhua-chen/MCLog.git
+
 Added tools:
 --------------
 **xctool** - It is a open source tool developed by Facebook that manage command lines tools much better than xcodebuild 

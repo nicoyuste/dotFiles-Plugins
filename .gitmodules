@@ -19,3 +19,6 @@ url=git@github.com:mralexgray/XcodeColors.git
 [submodule "xCode_Plugins/xctool"]
 	path = xCode_Plugins/xctool
 	url = https://github.com/facebook/xctool.git
+[submodule "xCode_Plugins/MCLog"]
+	path = xCode_Plugins/MCLog
+	url = https://github.com/yuhua-chen/MCLog.git
