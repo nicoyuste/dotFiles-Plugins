@@ -10,7 +10,7 @@ Added plugins:
 --------------
 **xCodeColors** - It allows you to print in colors while debugging. The one which is added to the repository (as submodule) is one from a fork on the originial.<br/>
 I have created a few Macros that help using colors while logging in debug mode with this plugin, they all are in [NYConstants.h](https://github.com/nicoyuste/dotFiles-Plugins/blob/master/NYConstants.h) file.
-*   Fork added: https://github.com/mralexgray/XcodeColors (compatibility with xCode5)
+*   Fork added: https://github.com/mralexgray/XcodeColors
 *   Original: https://github.com/robbiehanson/XcodeColors
 
 **KSImageNamed** - It helps you when you are creating an `UImage` with the method `ImageNamed:` showing you all the images that you have imported into the project.
