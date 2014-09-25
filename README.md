@@ -1,22 +1,23 @@
 Dot Files & xCode Plugins
 ================
 
-All the xCode Plugins are added the project (from other git repositories) as submodules of this one so they get updated with just making pulls of that repositories. For installing all the plugins just:
-*  1.Close xCode.
-*  2.Run `pluginsInstall.sh` from your terminal.
-*  3.Open xCode and start enjoying them.
+All the xCode Plugins are added to this repo (from other git repositories) as submodules of this one. They get updated by pulling from the remote repositories. For installing all the plugins just:
+*  1.Clone this project in your machine
+*  2.Close xCode.
+*  3.Run `pluginsInstall.sh` from your terminal.
+*  4.Open xCode and start enjoying them.
 
 Added plugins:
 --------------
-**xCodeColors** - It allows you to print in colors while debugging. The one which is added to the repository (as submodule) is one from a fork on the originial.<br/>
-I have created a few Macros that help using colors while logging in debug mode with this plugin, they all are in [NYConstants.h](https://github.com/nicoyuste/dotFiles-Plugins/blob/master/NYConstants.h) file.
+**xCodeColors** - It allows you to print with colors in the console while debugging. The one which is added to the repository (as submodule) is one from a fork on the originial.<br/>
+I have created a few Macros that help using colors with this plugin, they all are in [NYConstants.h](https://github.com/nicoyuste/dotFiles-Plugins/blob/master/NYConstants.h) file.
 *   Fork added: https://github.com/mralexgray/XcodeColors
 *   Original: https://github.com/robbiehanson/XcodeColors
 
 **KSImageNamed** - It helps you when you are creating an `UImage` with the method `ImageNamed:` showing you all the images that you have imported into the project.
 *   Original: https://github.com/ksuther/KSImageNamed-Xcode
 
-**XToDo** - It helps you to track all `TODOs`that you have all around your code.
+**XToDo** - It helps you to track all the `TODOs` that you have all around your code.
 *   Original: https://github.com/trawor/XToDo.git
 
 **ColorSense** - It helps you to define color with `[UIColor colorWith...]`
