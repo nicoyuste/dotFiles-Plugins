@@ -76,6 +76,17 @@ rm -rf build
 
 echo **MCLog installed**
 
+#! DBSmartPanels
+
+cd XCode_Plugins/DBSmartPanels
+git pull origin master
+cd ../..
+
+xcrun xcodebuild -project ./xCode_Plugins/DBSmartPanels/DBSmartPanels.xcodeproj -target DBSmartPanels  -configuration Debug
+rm -rf build
+
+echo **DBSmartPanels installed**
+
 #! xctools
 
 cd XCode_Plugins/xctool
