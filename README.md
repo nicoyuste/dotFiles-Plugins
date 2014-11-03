@@ -23,14 +23,17 @@ I have created a few Macros that help using colors with this plugin, they all ar
 **ColorSense** - It helps you to define color with `[UIColor colorWith...]`
 *   Original: https://github.com/omz/ColorSense-for-Xcode
 
-**BBUncrustifyPlugin** - 
+**BBUncrustifyPlugin** - Xcode plugin to format code using Uncrustify or ClangFormat.
 *   Original: https://github.com/benoitsan/BBUncrustifyPlugin-Xcode.git
 
-**VVDocumenter-Xcode** - 
+**VVDocumenter-Xcode** - You can find the method (or any code) you want to document to, and type in ///, the document will be generated for you and all params and return will be extracted into a Javadoc style, which is compatible with appledoc, Doxygen and HeaderDoc.
 *   Original: https://github.com/onevcat/VVDocumenter-Xcode.git
 
-**MCLog** - It gives you the possibility to apply regular expressions into the console output.
+**MCLog** - This plugin let you feel easy to trace console log. Although you may search the text in the console area, you can't hide something you don't want to see. 
 *   Original: https://github.com/yuhua-chen/MCLog.git
+
+**DBSmartPanels** - DBSmartPanels is a simple panel manager plugin for Xcode 6 which optimizes screen real estate by making common sense decisions on handling what's displayed in the editor window based on what you're currently doing
+*   Original: https://github.com/chaingarden/DBSmartPanels.git
 
 Added tools:
 --------------

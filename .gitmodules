@@ -22,3 +22,6 @@ url=git@github.com:mralexgray/XcodeColors.git
 [submodule "xCode_Plugins/MCLog"]
 	path = xCode_Plugins/MCLog
 	url = https://github.com/yuhua-chen/MCLog.git
+[submodule "xCode_Plugins/DBSmartPanels"]
+	path = xCode_Plugins/DBSmartPanels
+	url = https://github.com/chaingarden/DBSmartPanels.git
