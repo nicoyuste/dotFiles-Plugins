@@ -30,6 +30,7 @@ fastlane_core
 fuzzy_match
 gem-wrappers
 highline
+httparty
 i18n
 io-console
 json
@@ -38,6 +39,7 @@ mini_portile
 minitest
 molinillo
 multi_json
+multi_xml
 multipart-post
 nap
 net-sftp
@@ -60,6 +62,7 @@ rubyzip
 rvm
 security
 shenzhen
+splunk-sdk-ruby
 terminal-table
 test-unit
 thread_safe

@@ -2,7 +2,9 @@ apple-gcc42
 autoconf
 automake
 autossh
+brew-cask
 flow
+gdbm
 git
 hubflow
 lcov
@@ -15,11 +17,15 @@ maven
 mysql51
 node
 openssl
+openssl098
 pcre
 pkg-config
 pngquant
+python3
 readline
-ruby
+sqlite
 uncrustify
 watchman
+wget
 xctool
+xz
