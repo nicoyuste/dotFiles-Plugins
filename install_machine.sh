@@ -28,4 +28,10 @@ cd git_configuration
 cd ..
 
 echo
-echo 
+echo '--- xCode Plugins ---'
+cd xCode_plugins
+./install_xcode_plugins.sh
+cd ..
+
+echo
+echo

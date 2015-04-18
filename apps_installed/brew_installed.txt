@@ -6,6 +6,7 @@ brew-cask
 flow
 gdbm
 git
+gnu-sed
 hubflow
 lcov
 libgpg-error
