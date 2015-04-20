@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd..
+git submodule update --init --recursive
 
 #! XcodeColors --------------------
 cd xCode_Plugins/XcodeColors
