@@ -1,14 +1,11 @@
-#!/bin/bash                                                                     
-
-chmod 777 ./bash_profile
-chmod 777 ./bashrc
-chmod 777 ~/.bash_profile
-chmod 777 ~/.bashrc
+#!/bin/bash
 
 cp bash_profile ~/.bash_profile
-echo 'bash_profile installed...'
+echo '.bash_profile installed...'
+
+cp profile ~/.profile
+echo '.profile installed...'
 
 cp bashrc ~/.bashrc
-echo 'bashrc installed...'
+echo '.bashrc installed...'
 echo 'Remember to relaunch the terminal'
-
