@@ -1,3 +1,5 @@
+#export common paths
+export REPOS=~/Documents/repos
 
 # Set CLICOLOR if you want Ansi Colors in iTerm2
 export CLICOLOR=1
@@ -7,6 +9,9 @@ export TERM=xterm-256color
 
 #export mypath
 export PATH="$PATH":~/bin
+
+#export Android SDK
+export ANDROID_HOME=/usr/local/opt/android-sdk
 
 #GIT autocomplete
 if [ -f ~/.git-completion.bash ]; then
@@ -54,8 +59,10 @@ GREEN="\[\033[0;32m\]"
 
 export PS1="$BLUE\A\[\e[0m\]$BLACK@$GREEN.nicoyuste.$BLACK@:\W$RED[\$(parse_git_branch)\$(parse_svn_branch)]$BLACK$ " 
 
-
 alias s='git status'
 alias op='open . -a Finder'
+
+# Ruby
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 source ~/.profile

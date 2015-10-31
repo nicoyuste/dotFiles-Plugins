@@ -1,3 +1,4 @@
+android-sdk
 autoconf
 automake
 autossh
@@ -5,13 +6,17 @@ brew-cask
 carthage
 cask
 chisel
+cmake
 emacs
+exiftool
 fabric
 flow
 gdbm
 git
 gnu-sed
 hubflow
+iojs
+jq
 lcov
 libevent
 libgpg-error
@@ -21,12 +26,16 @@ libtool
 libyaml
 maven
 node
+oniguruma
 openssl
 pcre
 pkg-config
 pngquant
 python3
+rbenv
 readline
+ruby
+ruby-build
 sqlite
 swiftlint
 uncrustify
@@ -34,3 +43,4 @@ watchman
 wget
 xctool
 xz
+zlib
