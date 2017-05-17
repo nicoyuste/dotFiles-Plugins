@@ -2,6 +2,11 @@
 # export common paths
 # -------------------
 
+# Bug in MacOS Sierra. I need this so the terminal remember the ssh keys.
+# http://apple.stackexchange.com/questions/254468/macos-sierra-doesn-t-seem-to-remember-ssh-keys-between-reboots
+# -----------------------------------------------------------------------
+ssh-add -A 2>/dev/null;
+
 # Colors into terminal
 # ---------------------
 export CLICOLOR=1 # Set CLICOLOR if you want Ansi Colors in iTerm2
@@ -12,11 +17,10 @@ export TERM=xterm-256color # Set colors to match iTerm2 Terminal Colors
 export PATH="$PATH":~/bin
 export ANDROID_HOME=/usr/local/opt/android-sdk # Android SDK
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-export NVM_DIR="/Users/nyustetirados/.nvm"
+export NVM_DIR="$HOME/.nvm"
 
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi # Ruby
-  [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 REACT_EDITOR=atom
 
@@ -24,6 +28,11 @@ REACT_EDITOR=atom
 # -------------
 alias s='git status'
 alias op='open . -a Finder'
+alias myip='ipconfig getifaddr en0'
+
+alias and_shell='adb shell input text'
+alias and_screenshot="adb shell screencap -p > ~/Desktop/android_screen.png"
+
 eval "$(thefuck --alias)"
 
 # Load Git autocomplete
@@ -47,6 +56,7 @@ function parse_git_branch {
 }
 
 # GIT branch in the prompt
+# ------------------------
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ [\1]/'
 }

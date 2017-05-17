@@ -13,7 +13,7 @@
   s = status -sb
   br = branch
   co = checkout
-  glog = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  glog = log --graph --decorate --pretty=oneline --abbrev-commit
 [filter "lfs"]
 	clean = git lfs clean %f
 	smudge = git lfs smudge %f
