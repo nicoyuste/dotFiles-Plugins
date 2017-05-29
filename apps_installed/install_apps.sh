@@ -3,7 +3,7 @@
 export BREW_FILE='brew_installed.txt'
 export GEMS_FILE='gems_installed.txt'
 
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 echo 'brew update'
 brew update
 
