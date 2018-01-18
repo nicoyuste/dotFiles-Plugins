@@ -1,8 +1,10 @@
-[user]
-	name = Nicolas Yuste
-	email = info@nicoyuste.es
+[includeIf "gitdir:~/Documents/repos/groupon/**"]
+  path = .gitconfig-work
+[includeIf "gitdir:~/Documents/repos/nicoyuste/**"]
+  path = .gitconfig-play
+
 [core]
-	excludesfile = ~/.gitignore_global
+	excludesfile = /Users/nyustetirados/.gitignore_global
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
@@ -13,8 +15,16 @@
   s = status -sb
   br = branch
   co = checkout
+  ci = commit
+  co = checkout
+  undo = reset --soft HEAD^
+  df = diff
+  dc = diff --cached
+  ds = diff --staged
   glog = log --graph --decorate --pretty=oneline --abbrev-commit
+  ls = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short 
+
 [filter "lfs"]
-	clean = git lfs clean %f
-	smudge = git lfs smudge %f
-	required = true
+  clean = git lfs clean %f
+  smudge = git lfs smudge %f
+  required = true

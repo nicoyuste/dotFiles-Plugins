@@ -1,6 +1,7 @@
 
 # export common paths
 # -------------------
+export REPOS=~/Documents/repos
 
 # Bug in MacOS Sierra. I need this so the terminal remember the ssh keys.
 # http://apple.stackexchange.com/questions/254468/macos-sierra-doesn-t-seem-to-remember-ssh-keys-between-reboots
@@ -15,7 +16,8 @@ export TERM=xterm-256color # Set colors to match iTerm2 Terminal Colors
 # My Path
 # ----------------
 export PATH="$PATH":~/bin
-export ANDROID_HOME=/usr/local/opt/android-sdk # Android SDK
+export ANDROID_HOME=~/Library/Android/sdk # Android SDK
+export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools # Android Tools
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export NVM_DIR="$HOME/.nvm"
 
@@ -32,6 +34,7 @@ alias myip='ipconfig getifaddr en0'
 
 alias and_shell='adb shell input text'
 alias and_screenshot="adb shell screencap -p > ~/Desktop/android_screen.png"
+alias and_clean_proxy='adb shell rm -f /data/local/tmp/proxy-config'
 
 eval "$(thefuck --alias)"
 
