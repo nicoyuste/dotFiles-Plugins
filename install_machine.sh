@@ -9,6 +9,9 @@ chmod 777 $APPS_INSTALL_FILE
 chmod 777 $BASH_INSTALL_FILE
 chmod 777 $GIT_INSTALL_FILE
 
+# Installing Brew
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
 echo
 echo '--- BREW and GEMS ---'
 cd apps_installed

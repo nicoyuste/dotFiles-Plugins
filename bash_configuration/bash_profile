@@ -30,7 +30,9 @@ REACT_EDITOR=atom
 # -------------
 alias s='git status'
 alias op='open . -a Finder'
+alias stree='open . -a SourceTree'
 alias myip='ipconfig getifaddr en0'
+alias clean_camera='sudo killall VDCAssistant'
 
 alias and_shell='adb shell input text'
 alias and_screenshot="adb shell screencap -p > ~/Desktop/android_screen.png"

@@ -10,6 +10,7 @@ chisel
 cloog
 cmake
 cocoapods
+coreutils
 emacs
 exiftool
 fabric
@@ -28,10 +29,10 @@ gnu-sed
 gnupg
 gnutls
 gobject-introspection
+graphite2
 harfbuzz
 hubflow
 icu4c
-isl@0.11
 isl@0.12
 jpeg
 jq
@@ -44,6 +45,7 @@ libevent
 libffi
 libgcrypt
 libgpg-error
+libidn2
 libksba
 libmpc@0.8
 libpng
@@ -54,13 +56,14 @@ libtool
 libunistring
 libusb
 libyaml
-maven
+little-cms2
 mpfr@2
 nettle
 node
 npth
 oniguruma
 openssl
+openssl@1.1
 p11-kit
 pango
 pcre
@@ -77,7 +80,6 @@ shared-mime-info
 sqlite
 thefuck
 uncrustify
-vert.x
 watchman
 wget
 x264

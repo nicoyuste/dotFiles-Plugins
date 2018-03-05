@@ -16,5 +16,9 @@ echo 'git config file installed...'
 cp ./gitconfig-play ~/.gitconfig-play
 echo 'git config-play file installed...'
 
+cp ./gitconfig-work ~/.gitconfig-work
+echo 'git config-work file installed...'
+
+
 cp git-completion.bash ~/.git-completion.bash
 echo 'bashrc installed...'

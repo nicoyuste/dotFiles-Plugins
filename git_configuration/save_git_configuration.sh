@@ -15,3 +15,6 @@ echo 'git config file saved...'
 cp ~/.gitconfig-play ./gitconfig-play
 echo 'git config-play file saved...'
 
+cp ~/.gitconfig-work ./gitconfig-work
+echo 'git config-work file saved...'
+
