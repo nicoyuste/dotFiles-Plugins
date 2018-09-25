@@ -21,6 +21,11 @@ export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools # Android T
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export NVM_DIR="$HOME/.nvm"
 
+# Homebrew
+# -------------
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="/usr/local/opt/python@2/libexec/bin:$PATH"
+
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
@@ -38,7 +43,7 @@ alias and_shell='adb shell input text'
 alias and_screenshot="adb shell screencap -p > ~/Desktop/android_screen.png"
 alias and_clean_proxy='adb shell rm -f /data/local/tmp/proxy-config'
 
-eval "$(thefuck --alias)"
+alias odo_streamer='ssh -o StrictHostKeyChecking=no -l nicoyuste 192.168.1.24 "java -jar Documents/repos/bundle/Streamer-1.0.jar"'
 
 # Load Git autocomplete
 # -----------------

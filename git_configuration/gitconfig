@@ -1,10 +1,11 @@
-[includeIf "gitdir:~/Documents/repos/work/**"]
+[includeIf "gitdir:~/Documents/repos/groupon/**"]
   path = .gitconfig-work
 [includeIf "gitdir:~/Documents/repos/nicoyuste/**"]
   path = .gitconfig-play
 
 [core]
 	excludesfile = /Users/nyustetirados/.gitignore_global
+	commentchar = @
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
@@ -28,3 +29,5 @@
   clean = git lfs clean %f
   smudge = git lfs smudge %f
   required = true
+[commit]
+	template = /Users/nyustetirados/.stCommitMsg
