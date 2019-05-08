@@ -2,6 +2,7 @@
 
 export BREW_FILE='brew_installed.txt'
 export GEMS_FILE='gems_installed.txt'
+export PIP_FILE='pip3_installed.txt'
 
 echo 'Saving brew Apps...'
 brew list > $BREW_FILE
@@ -23,4 +24,7 @@ while read p; do
 done < $TEMP_GEMS
 
 rm $TEMP_GEMS
+
+echo 'Saving pip3 installed...'
+pip3 freeze > $PIP_FILE
 

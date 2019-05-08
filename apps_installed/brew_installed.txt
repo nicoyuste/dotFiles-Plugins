@@ -7,6 +7,7 @@ cairo
 carthage
 cask
 chisel
+cloc
 cloog
 cmake
 cocoapods
@@ -57,6 +58,8 @@ libunistring
 libusb
 libyaml
 little-cms2
+maven
+mint
 mpfr@2
 mysql@5.7
 nettle

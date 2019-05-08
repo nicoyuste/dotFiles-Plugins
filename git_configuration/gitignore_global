@@ -27,3 +27,4 @@ build/*
 xcuserdata
 *.moved-aside
 DerivedData
+src-website/build
