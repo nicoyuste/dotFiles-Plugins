@@ -17,8 +17,3 @@ while read p; do
 	echo 'gem install' $p
 	gem install $p
 done < $GEMS_FILE
-
-while read p; do
-	echo 'pip3 install' $p
-	pip3 install $p
-done < $PIP_FILE

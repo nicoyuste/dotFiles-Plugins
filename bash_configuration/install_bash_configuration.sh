@@ -21,3 +21,6 @@ echo '.zshrc installed...'
 echo 'Installing oh-my-zsh...'
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 echo 'Remember to relaunch the terminal'
+
+# This will make zsh the default termina instead of bash
+chsh -s /bin/zsh

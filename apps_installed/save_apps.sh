@@ -25,6 +25,3 @@ done < $TEMP_GEMS
 
 rm $TEMP_GEMS
 
-echo 'Saving pip3 installed...'
-pip3 freeze > $PIP_FILE
-

@@ -14,11 +14,11 @@ chmod 777 $GIT_INSTALL_FILE
 # Installing Brew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-echo
-echo '--- BREW and GEMS ---'
-cd apps_installed
-./install_apps.sh
-cd ..
+# echo
+# echo '--- BREW and GEMS ---'
+# cd apps_installed
+# ./install_apps.sh
+# cd ..
 
 echo
 echo '--- BASH CONFIGURATION ---'
@@ -30,12 +30,6 @@ echo
 echo '--- GIT CONFIGURATION ---'
 cd git_configuration
 ./install_git_configuration.sh
-cd ..
-
-echo
-echo '--- xCode Plugins ---'
-cd xCode_plugins
-./install_xcode_plugins.sh
 cd ..
 
 echo
