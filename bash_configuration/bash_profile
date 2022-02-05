@@ -26,18 +26,17 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/H
 
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+source "$HOME/.sdkman/bin/sdkman-init.sh" # Loads SDKman, java version manager
 
 # Homebrew
 # -------------
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/python@2/libexec/bin:$PATH"
 
-#Pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-if command -v pyenv 1>/dev/null 2>&1; then
-    eval "$(pyenv init -)"
-fi
+# Pyenv
+# -------------
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init --path)"
 
 REACT_EDITOR=atom
 
@@ -52,9 +51,6 @@ alias clean_camera='sudo killall VDCAssistant'
 alias and_shell='adb shell input text'
 alias and_screenshot="adb shell screencap -p > ~/Desktop/android_screen.png"
 alias and_clean_proxy='adb shell rm -f /data/local/tmp/proxy-config'
-
-alias slack_dark='sudo npx install-dark-theme'
-alias slack_light='sudo npx install-dark-theme --rollback'
 
 alias odo_streamer='ssh -o StrictHostKeyChecking=no -l nicoyuste 192.168.1.43 "java -jar Documents/repos/bundle/Streamer-1.0.jar"'
 

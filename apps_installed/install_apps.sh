@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ "$EUID" -ne 0 ]
+  then echo "Please run as root"
+  exit
+fi
+
 export BREW_FILE='brew_installed.txt'
 export GEMS_FILE='gems_installed.txt'
 export PIP_FILE='pip3_installed.txt'
