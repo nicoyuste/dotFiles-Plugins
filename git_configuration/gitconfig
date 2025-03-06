@@ -1,16 +1,23 @@
-[includeIf "gitdir:~/Documents/repos/groupon/**"]
-  path = .gitconfig-work
-[includeIf "gitdir:~/Documents/repos/nicoyuste/**"]
-  path = .gitconfig-play
+[user]
+	email = nicolasy@spotify.com
+	name = Nicolas Yuste Tirados
 [core]
-	excludesfile = /Users/nicoyuste/.gitignore_global
+	excludesfile = /Users/nicolasy/.gitignore_global
 	commentchar = @
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+[diff]
+	tool = Kaleidoscope
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
 	trustExitCode = true
+[merge]
+	tool = Kaleidoscope
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
+[mergetool]
+	prompt = false
 [alias]
   s = status -sb
   br = branch
@@ -23,11 +30,20 @@
   ds = diff --staged
   glog = log --graph --decorate --pretty=oneline --abbrev-commit
   ls = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short 
-
+[pull]
+	rebase = true
 [filter "lfs"]
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
     required = true
     process = git-lfs filter-process
-[commit]
-	template = /Users/nyustetirados/.stCommitMsg
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[url "https://nicolasy:Scoladilla1@ghe.spotify.net/"]
+	insteadOf = https://ghe.spotify.net/ 
+[url "https://nicolasy:Scoladilla1@ghe.spotify.net/pclark/spotify-auth?go-get=1"]
+	insteadOf = https://ghe.spotify.net/pclark/spotify-auth?go-get=1

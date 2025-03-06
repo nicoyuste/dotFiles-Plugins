@@ -1,3 +1,8 @@
 # ~/.lldbinit
 
 command script import /usr/local/opt/chisel/libexec/fblldb.py
+
+### Automatically added by XCRemoteCache in client-ios
+command source /Users/nicolasy/.lldbinit-xcrc
+command script import "/Users/nicolasy/Library/Application Support/Kaleidoscope/lldb_ksdiff.py"
+command source ~/.lldbinit-rules_xcodeproj

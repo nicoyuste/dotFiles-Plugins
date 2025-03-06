@@ -1,0 +1,5 @@
+
+# SPT CONFIG BEGIN
+export PATH=$PATH:/Users/nicolasy/.local/bin
+# SPT CONFIG END
+export PATH=/opt/spotify-devex/bin:$PATH

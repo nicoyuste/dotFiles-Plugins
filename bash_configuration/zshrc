@@ -1,41 +1,38 @@
-# Path and theme to your oh-my-zsh installation.
-# ---------------------
-export ZSH="/Users/nicoyuste/.oh-my-zsh"
-ZSH_THEME="robbyrussell"
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
-# export common paths
-# -------------------
-export REPOS=~/Documents/repos
+# Path to your oh-my-zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
 
- # Bug in MacOS Sierra. I need this so the terminal remember the ssh keys.
-# http://apple.stackexchange.com/questions/254468/macos-sierra-doesn-t-seem-to-remember-ssh-keys-between-reboots
-# -----------------------------------------------------------------------
-ssh-add -A 2>/dev/null;
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
-# Homebrew
-# -------------
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
-export PATH="/usr/local/opt/python@2/libexec/bin:$PATH"
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Pyenv
-# -------------
-export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init --path)"
+zstyle ':omz:update' mode reminder  # Auto-update behaviour
+zstyle ':omz:update' frequency 13 # Auto-update frequency in days
 
-# My Path
-# ----------------
-export PATH="$PATH":~/bin
-export ANDROID_HOME=~/Library/Android/sdk # Android SDK
-export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools # Android Tools
-export PATH=${PATH}:$ANDROID_HOME/emulator #Android Emulators
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-export PATH="$HOME/.fastlane/bin:$PATH" # It was installed doing: brew cask install fastlane
-export NVM_DIR="$HOME/.nvm"
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-source "$HOME/.sdkman/bin/sdkman-init.sh" # Inits SDKman, java versions manager
+HIST_STAMPS="dd/mm/yyyy" # History command timestamp output
+
+plugins=(git)
+source $ZSH/oh-my-zsh.sh
+
+
+
+
+
+# ======================================================================
+# USER CONFIGURATION / ALIAS
+# ======================================================================
 
 REACT_EDITOR=atom
 
@@ -47,12 +44,123 @@ alias stree='open . -a SourceTree'
 alias myip='ipconfig getifaddr en0'
 alias clean_camera='sudo killall VDCAssistant'
 
+alias smerge='"/Applications/Sublime Merge.app/Contents/SharedSupport/bin/smerge" .'
+
 alias and_shell='adb shell input text'
 alias and_screenshot="adb shell screencap -p > ~/Desktop/android_screen.png"
 alias and_clean_proxy='adb shell rm -f /data/local/tmp/proxy-config'
 
-alias odo_streamer='ssh -o StrictHostKeyChecking=no -l nicoyuste 192.168.1.43 "java -jar Documents/repos/bundle/Streamer-1.0.jar"'
+# Spotify alias
+# -------------
+alias upstream_update="cd $IP;git fetch upstream -p;git co master;git rebase upstream/master;git prune;git co develop;git rebase master"
+alias android_upstream_update="cd $AN;git fetch upstream -p;git co master;git rebase upstream/master;git prune;git co develop;git rebase master"
+alias core_upstream_update="cd $CO;git fetch upstream -p;git co master;git rebase upstream/master;git prune"
+alias bw="spt bw"
+alias bw_core="CLIENT_CORE_ROOT=/Users/nicolasy/Developer/spotify/client-core spt project:xcode;spt ws"
 
-source $ZSH/oh-my-zsh.sh
-unsetopt share_history
-setopt no_share_history
+
+
+# ======================================================================
+# PATHS AND INSTALLED TOOLS
+# ======================================================================
+
+# export common paths
+# -------------------
+export REPOS=~/Developer/
+export IP=~/Developer/spotify/client-ios
+export AN=~/Developer/spotify/client-android
+export CO=~/Developer/spotify/client-core
+
+# My Path
+# -------
+export PATH="$PATH":~/bin
+export PATH="$PATH":~/.local/bin
+export PATH="$PATH":~/Developer/scripts_in_path
+
+# Gems (including Cocoapods)
+# --------------------------
+export PATH=$HOME/.gem/bin:$PATH
+
+# Android
+# ----------
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools # Android Tools
+export PATH=${PATH}:$ANDROID_HOME/emulator #Android Emulators
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+# Fastlane
+# -------------
+export PATH="$HOME/.fastlane/bin:$PATH" # It was installed doing: brew cask install fastlane
+
+
+# Homebrew path
+# -------------
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+eval "$(/opt/homebrew/bin/brew shellenv)"
+export HOMEBREW_CASK="$HOMEBREW_PREFIX/Caskroom"
+
+# Python path
+# ------------
+PYTHONPATH="$HOME/Library/Python/3.9/bin:$HOME/Library/Python/3.9/lib/python/site-packages"
+export PATH="$PYTHONPATH:$PATH"
+
+# Python env
+# ------------
+#  This helps managing multiple version of python on the machine. I don't really know much about it.
+#  https://realpython.com/intro-to-pyenv/#installing-pyenv
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+# GO
+# -----
+export GOPATH=~/code/go # Go path, this is assuming Go was installed using brew install go
+export PATH=~/code/go/bin:$PATH  # Go path, this is assuming Go was installed using brew install go
+
+# Flutter
+# -----
+export PATH=~/Developer/flutter/bin:$PATH
+
+# Google Cloud SDK - installed using brew cask
+# ---------------------------------------------
+CLOUDSDK_PYTHON=/usr/bin/python3
+source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
+source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
+
+# RVM, ruby versions manager
+# ------------------------------
+export PATH="$PATH:$HOME/.rvm/bin"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# NVM, node versions manager
+# ------------------------------
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+# SDKMAN. java versions manager
+# -----------------------------------
+source "$HOME/.sdkman/bin/sdkman-init.sh" 
+
+
+
+# ======================================================================
+# SPOTIFY THINGS
+# =====================================================================
+
+export PATH=~/Developer/spotify/spuserinfo/bin:$PATH #spuserinfo tool
+export CLIENT_CORE_AUTO_FIX_FORMATTING=1 # This is so when commiting in Core, things get automatically formatted
+
+# EMSDK - This is used for the spim (spotify small client) app
+# ---------------------------------------
+EMSDKPATH_1="/Users/nicolasy/Developer/spotify/emsdk/upstream/emscripten"
+EMSDKPATH_2="/Users/nicolasy/Developer/spotify/emsdk"
+export PATH="$EMSDKPATH_1:$EMSDKPATH_2:$PATH"
+
+# Worktree tool
+# ---------------
+alias t='eval $(python3 ~/Developer/tree.py)'
+
+# SPT CONFIG BEGIN
+export PATH=$PATH:/Users/nicolasy/.local/bin
+# SPT CONFIG END
+export PATH=/opt/spotify-devex/bin:$PATH
